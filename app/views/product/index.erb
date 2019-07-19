@@ -1,0 +1,20 @@
+<div>essai</div>
+<script src="//unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
+  <div><%=render 'swagger_ui/swagger_ui', discovery_url: 'swagger_doc.json'%></div>
+<script type="text/javascript">
+  console.log("essai");
+  function essai(){
+    $.ajax({
+      url: 'product/manager/',
+      method: 'GET',
+      data: { },
+      success: function (data,status,xhr) {
+        console.log("status", data);
+      },
+      error: function (jqXhr, textStatus, errorMessage){}
+  });
+}
+document.addEventListener("DOMContentLoaded", function(event){
+  console.log("lol");
+});
+</script>
